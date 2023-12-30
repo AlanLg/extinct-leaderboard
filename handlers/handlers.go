@@ -2,7 +2,7 @@ package handlers
 
 import (
 	"encoding/json"
-	"first-web-app/database"
+	"extinct-leaderboard/database"
 	"fmt"
 	"net/http"
 

@@ -2,7 +2,7 @@ package database
 
 import (
 	"context"
-	"first-web-app/models"
+	"extinct-leaderboard/models"
 	"fmt"
 	"log"
 	"time"

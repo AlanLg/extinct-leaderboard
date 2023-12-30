@@ -1,8 +1,8 @@
 package main
 
 import (
-	"first-web-app/database"
-	"first-web-app/handlers"
+	"extinct-leaderboard/database"
+	"extinct-leaderboard/handlers"
 	"log"
 	"net/http"
 
