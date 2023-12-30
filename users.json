@@ -1,0 +1,143 @@
+[{
+  "_id": {
+    "$oid": "659026cb75253bd0d02ac179"
+  },
+  "activeTag": "",
+  "backpack": {
+    "loot": {},
+    "rows": 3
+  },
+  "balance": 0,
+  "credits": 0,
+  "flightTime": 0,
+  "god": false,
+  "homeCapacity": 3,
+  "homes": {},
+  "merchantItems": [],
+  "playerWarps": {},
+  "pvp": false,
+  "statisticsUser": {
+    "blocksMined": {},
+    "cropsHarvested": {},
+    "cropsPlaced": {},
+    "deaths": 0,
+    "fishCaught": {},
+    "kills": 0,
+    "level": 0,
+    "mobDeaths": {},
+    "mobKills": {},
+    "oresMined": {},
+    "playTime": 1795,
+    "playTimeLastUpdated": {
+      "$numberLong": "1703945931846"
+    },
+    "rubbishCaught": {},
+    "votes": 0
+  },
+  "uuid": {
+    "$binary": {
+      "base64": "+2NZqcSjSMS+gZjQvWE+mA==",
+      "subType": "04"
+    }
+  }
+},
+{
+  "_id": {
+    "$oid": "6590271375253bd0d02ac19d"
+  },
+  "activeTag": "",
+  "backpack": {
+    "loot": {},
+    "rows": 3
+  },
+  "balance": 0,
+  "credits": 0,
+  "flightTime": 0,
+  "god": false,
+  "homeCapacity": 3,
+  "homes": {},
+  "merchantItems": [],
+  "playerWarps": {
+    "test": {
+      "id": "test",
+      "location": "world:0.427240059530213:70.0:12.323040511892833:42.07641:15.388755",
+      "material": "ACACIA_FENCE",
+      "visibility": "PUBLIC"
+    }
+  },
+  "pvp": false,
+  "statisticsUser": {
+    "blocksMined": {},
+    "cropsHarvested": {},
+    "cropsPlaced": {},
+    "deaths": 0,
+    "fishCaught": {},
+    "kills": 0,
+    "level": 0,
+    "mobDeaths": {},
+    "mobKills": {},
+    "oresMined": {},
+    "playTime": 320069,
+    "playTimeLastUpdated": {
+      "$numberLong": "1703946031895"
+    },
+    "rubbishCaught": {},
+    "votes": 0
+  },
+  "uuid": {
+    "$binary": {
+      "base64": "IquOsVAlQ5WNlvmUx0ZF9g==",
+      "subType": "04"
+    }
+  }
+},
+{
+  "_id": {
+    "$oid": "6590271375253bd0d02ac19f"
+  },
+  "activeTag": "",
+  "backpack": {
+    "loot": {},
+    "rows": 3
+  },
+  "balance": 0,
+  "credits": 0,
+  "flightTime": 0,
+  "god": false,
+  "homeCapacity": 3,
+  "homes": {},
+  "merchantItems": [],
+  "playerWarps": {
+    "hello": {
+      "id": "hello",
+      "location": "world:-9.441980637790396:69.0:22.91800840121226:-56.17306:5.0061426",
+      "material": "ACACIA_FENCE",
+      "visibility": "PUBLIC"
+    }
+  },
+  "pvp": false,
+  "statisticsUser": {
+    "blocksMined": {},
+    "cropsHarvested": {},
+    "cropsPlaced": {},
+    "deaths": 0,
+    "fishCaught": {},
+    "kills": 0,
+    "level": 0,
+    "mobDeaths": {},
+    "mobKills": {},
+    "oresMined": {},
+    "playTime": 252941,
+    "playTimeLastUpdated": {
+      "$numberLong": "1703946034295"
+    },
+    "rubbishCaught": {},
+    "votes": 0
+  },
+  "uuid": {
+    "$binary": {
+      "base64": "RHbBy/xGRdiXN7C1a5QMsQ==",
+      "subType": "04"
+    }
+  }
+}]
