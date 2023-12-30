@@ -1,0 +1,43 @@
+# Compiled binary
+*.exe
+*.out
+*.dll
+*.so
+*.dylib
+
+# Test binary, build with `go test -c`
+*.test
+
+# Output of the go coverage tool, specifically when used with LiteIDE
+*.out
+
+# Dependency directories (remove the comment if you don't use dep)
+# /vendor/
+
+# Application artifacts
+/app
+
+# IDE files
+.idea/
+.vscode/
+
+# Compiled Go files
+*.test
+*.prof
+
+# Binary files
+*.gz
+
+# Log files
+*.log
+
+# Environment variables file
+.env
+
+# Ignore the local configuration file (useful for development)
+config.local.yaml
+
+# OS-specific
+.DS_Store
+Thumbs.db
+
