@@ -3,31 +3,45 @@ package handlers
 import (
 	"encoding/json"
 	"extinct-leaderboard/database"
-	"fmt"
 	"net/http"
 
 	"github.com/julienschmidt/httprouter"
 )
 
-func Leaderboard(w http.ResponseWriter, r *http.Request, p httprouter.Params) {
+func GetLeaderboard(w http.ResponseWriter, r *http.Request, p httprouter.Params) {
 	users := database.GetLeaderboard(p.ByName("key"))
-
-	for _, user := range users {
-		output, err := json.MarshalIndent(user, "", "    ")
-		if err != nil {
-			panic(err)
-		}
-		fmt.Printf("%s\n", output)
-	}
-
 	json, err := json.Marshal(users)
 
 	if err != nil {
 		w.WriteHeader(http.StatusInternalServerError)
-		w.Write([]byte("users could not be converted to json"))
+		w.Write([]byte("Server Error"))
 		panic("could not convers users to json")
 	}
 
 	w.Header().Set("Content-Type", "application/json")
 	w.Write(json)
+}
+
+func GetUserStats(w http.ResponseWriter, r *http.Request, p httprouter.Params) {
+	user, err := database.GetUser(p.ByName("username"))
+	json, jsonErr := json.Marshal(user.StatisticsUser)
+
+	if err != nil {
+		w.WriteHeader(http.StatusInternalServerError)
+		w.Write([]byte("Server Error"))
+		panic("user with ign " + p.ByName("username") + " not found")
+	}
+
+	if jsonErr != nil {
+		w.WriteHeader(http.StatusInternalServerError)
+		w.Write([]byte("Server Error"))
+		panic("could not convers users to json")
+	}
+
+	w.Header().Set("Content-Type", "application/json")
+	w.Write(json)
+}
+
+func GetUserFriends(w http.ResponseWriter, r *http.Request, p httprouter.Params) {
+
 }

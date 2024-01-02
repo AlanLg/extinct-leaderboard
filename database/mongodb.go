@@ -42,6 +42,37 @@ func GetDatabase() *mongo.Database {
 	return client.Database(databaseName)
 }
 
+func GetUser(username string) (user *models.User, err error) {
+	filter := bson.D{{"username", username}}
+
+	if client == nil {
+		panic("client has not been initialized")
+	}
+
+	coll := GetDatabase().Collection(collectionName)
+	cursor, err := coll.Find(context.TODO(), filter)
+
+	if err != nil {
+		panic(err)
+	}
+
+	var result models.User
+
+	if cursor.Next(context.TODO()) {
+		if err := cursor.Decode(&result); err != nil {
+			panic(err)
+		}
+	} else {
+		fmt.Printf("No document was found")
+		return nil, mongo.ErrNoDocuments
+	}
+	if err != nil {
+		panic(err)
+	}
+
+	return &result, nil
+}
+
 func GetLeaderboard(key string) []models.User {
 	filter := bson.D{}
 	opts := options.Find().SetSort(bson.D{{key, -1}})
