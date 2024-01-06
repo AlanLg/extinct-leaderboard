@@ -5,12 +5,13 @@ import (
 	"extinct-leaderboard/handlers"
 	"log"
 	"net/http"
+	"os"
 
 	"github.com/julienschmidt/httprouter"
 )
 
 func main() {
-	database.Init("mongodb://localhost:27017")
+	database.Init(os.Getenv("DATABASE_URI"))
 
 	router := httprouter.New()
 
