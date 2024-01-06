@@ -19,5 +19,6 @@ func main() {
 	router.GET("/api/v1/user/:username/statistics", handlers.GetUserStats)
 	router.GET("/api/v1/user/:username/friends", handlers.GetUserFriends)
 
+	log.Println("Bot is now running.  Press CTRL-C to exit.")
 	log.Fatal(http.ListenAndServe(":8080", router))
 }
